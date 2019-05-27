@@ -29,7 +29,7 @@ export class ServicesPage implements OnInit {
   ngOnInit() {
   }
 
-
+/*
   getAll() {
     return this.db.list(this.PATH)
       .snapshotChanges()
@@ -38,7 +38,7 @@ export class ServicesPage implements OnInit {
       })
   }
 
-
+*/
 
 
 }
