@@ -3,6 +3,7 @@ import { User } from '../Models/User';
 import { Router } from '@angular/router';
 
 import { AngularFireAuth } from 'angularfire2/auth';
+import { ToastController } from '@ionic/angular';
 
 
 @Component({
@@ -21,15 +22,20 @@ export class LoginPage implements OnInit {
   }
 
  
-  register(){
-    this.router.navigateByUrl('/register')
+  goRregisterPage(){
+    this.router.navigateByUrl('/register');
 
+  }
+
+  goServicesPage(){
+    this.router.navigateByUrl('/services');
   }
 
   login(){
     try{
       const result = this.auth.auth.signInWithEmailAndPassword(this.user.email, this.user.password);
       console.log(result);
+      this.goServicesPage();
     } catch(e){
       console.error(e);
     }

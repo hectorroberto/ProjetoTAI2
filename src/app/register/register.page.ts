@@ -20,11 +20,17 @@ export class RegisterPage implements OnInit {
 
   ngOnInit() {
   }
+  public goToLoginPage(){
+    this.router.navigateByUrl('/login')
+
+  }
+
 
   async register(user: User){
     try{
       const result = this.auth.auth.createUserWithEmailAndPassword(this.user.email, this.user.password);
       console.log(result);
+      this.goToLoginPage();
     }catch(e){
       console.error(e);
     }
