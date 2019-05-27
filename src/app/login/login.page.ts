@@ -3,8 +3,6 @@ import { User } from '../Models/User';
 import { Router } from '@angular/router';
 
 import { AngularFireAuth } from 'angularfire2/auth';
-import { ToastController } from '@ionic/angular';
-
 
 @Component({
   selector: 'app-login',

@@ -12,6 +12,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { AngularFireModule } from "angularfire2";
 import { FIREBASE_CONFIG } from './app.firebase.config';
 
+
+
+
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
@@ -19,7 +24,8 @@ import { FIREBASE_CONFIG } from './app.firebase.config';
     BrowserModule,
     IonicModule.forRoot(),
     AppRoutingModule,
-    AngularFireModule.initializeApp(FIREBASE_CONFIG)
+    AngularFireModule.initializeApp(FIREBASE_CONFIG),
+    AngularFireDatabaseModule,
   ],
   providers: [
     StatusBar,
