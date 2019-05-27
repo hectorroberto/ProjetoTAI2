@@ -1,0 +1,30 @@
+
+<ion-content  padding>
+
+  <ion-grid>
+    <ion-row  justify-content-center>
+      <ion-col align-sef-center size-md="6" size-lg="5" size-xs="12">
+        <div text-center>
+          <h1> Registre-se </h1>
+        </div>
+
+        <ion-item>
+          <ion-input type="text" [(ngModel)]="user.email" placeholder="Insira seu e-mail..."></ion-input>
+        </ion-item>
+        <ion-item>
+         <ion-input type="password" [(ngModel)]="user.password" placeholder="Insira sua senha..."></ion-input>
+        </ion-item>
+        
+
+        <ion-button color="success" expand="block" (click)="register()"> Enviar</ion-button>
+
+
+
+
+
+
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
